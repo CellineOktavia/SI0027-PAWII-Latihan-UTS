@@ -51,6 +51,10 @@ exports.getAll = async (req, res) => {
     query = query.select(fieldsBy);
   }
 
+  // const projection = req.query.fields
+  //     ? req.query.fields.split(",").join(" ")
+  //     : null;
+
   // Terapkan pagination skip & limit
   query = query.skip(skip).limit(limit);
 
